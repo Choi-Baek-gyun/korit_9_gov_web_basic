@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+    }
+
+    .container {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .t-box {
+      height: 50px;
+      background-color: #2da9a5;
+    }
+
+    .u-box {
+      flex-grow: 1; /* 남는 공간 전체 */
+      display: flex;
+    }
+
+    .l-box {
+      width: 200px;
+      background-color: #7f7f7f;
+    }
+
+    .r-box {
+      flex-grow: 1;
+      background-color: #f3f3f3;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="t-box"></div>
+    <div class="u-box">
+      <div class="l-box"></div>
+      <div class="r-box"></div>
+    </div>
+  </div>
+</body>
+</html>

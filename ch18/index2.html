@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    console.log(1 || 2);
+    console.log(11 || 21);
+    console.log(0 || 21);
+    console.log(0 || 21);
+    console.log(11 && 21);
+    console.log(0 && 21);
+    console.log(false && 21);
+
+    const a = 2;
+    console.log((a % 2 === 0  && "짝수") || "홀수");
+
+    const b = null;
+    console.log(b ?? "test"); // null이면 test로 대체
+    const c = {};
+    console.log(c ?? "test"); // null일 때만 가능
+
+  </script>
+</body>
+</html>

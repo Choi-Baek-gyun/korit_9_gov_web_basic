@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    new Promise((resolve, reject) => {
+      console.log(1);
+      resolve(10);
+      console.log("오류생성");
+      reject(10);
+    }).catch((massage) => {
+      console.log("reject 호출")
+      console.log(e.message); // catch가 처리 할 수 없으니 뒤로 미뤄버림
+    }).then((v) => {
+      console.log("resolve 호출")
+      console.log(v)
+      const error = new Error(100000);
+      throw error;
+      console.log(v);
+      return 100000;
+    });
+    new Promise((resolve, reject) => {
+      console.log(2);
+      resolve(20);
+    }).then((v) => {
+      console.log(v)
+    });
+
+    new Promise((resolve, reject) => {
+      console.log(3);
+      reject(30);
+    }).catch((v) => {
+      console.log(v)
+    });
+  </script>
+</body>
+</html>
